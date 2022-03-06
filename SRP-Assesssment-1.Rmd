@@ -1,0 +1,64 @@
+---
+title: "SRP Assessment 1"
+author: "Sandeep Kumar Patel s4651719"
+date: '2022-03-06'
+output: html_document
+---
+
+*2 Create the heading of the first level and call it RMarkdown editing*
+
+# Rmarkdown editing
+
+*3. Write 2-3 sentences about RMarkdown (you can google this information or use resources recommended in class - no need to reference)*
+
+*4. In the above use bold and italics for editing.*
+
+**R Markdown** provides an authoring framework for data science. You can use a single R Markdown file to both
+
+*1. Save and execute code*
+*2. Generate high quality reports that can be shared with an audience*
+
+R Markdown documents are fully reproducible and support dozens of static and dynamic output formats.
+
+*5. Review the suggested documentation on how to insert links in the .rmd file and include an in-text link to https://rmarkdown.rstudio.com/lesson-8.html*
+
+[Click here](https://rmarkdown.rstudio.com/lesson-8.html)
+
+*6. Insert an R chunk and create a variable with this dataset*
+*https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2018/2018-09-04/fastfood_calories.csv*
+
+*The name of the variable should be `fastfood`*
+
+```{r}
+#installpackages(tidyverse)
+library(tidyverse)
+
+fastfood <- read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2018/2018-09-04/fastfood_calories.csv')
+
+```
+
+*7. Display the first 10 rows of the dataset using head() and kable().*
+
+*Display the first 10 rows of the dataset and the first 5 variables*
+
+*Use Help and the link below to read more about those functions  https://bookdown.org/yihui/rmarkdown-cookbook/kable.html*
+
+## Use of Head function
+
+```{r}
+fastfood[1:10, 1:5]
+```
+
+
+## Use of kable function
+
+```{r}
+knitr::kable(head(fastfood[1:10, 1:5]), "pipe")
+```
+
+
+
+
+
+
+
